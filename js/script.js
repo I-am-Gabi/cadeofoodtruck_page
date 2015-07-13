@@ -19,3 +19,21 @@ $("#enviar").click(function( event ) {
     		document.getElementById("msgEmail").innerHTML = "Problema ao enviar o email, tente novamente mais tarde :(";
   	});
 });
+
+$("#cadastroBotao").click(function( event ) {
+	email = document.getElementById('cadastroEmail').value;
+  	$.ajax({
+	  	method: "GET",
+	  	url: "email.php",
+	  	data: {
+	  		cod: "f00dtruck", // Segurança nível nasa :3 
+	  		id: 1, 
+	  		email: email}
+	})
+  	.done(function( msg ) {
+    	if(msg == 1)
+    		document.getElementById("msgCadastro").innerHTML = "Email salvo com sucesso :)";
+    	else if(msg == 0)
+    		document.getElementById("msgCadastro").innerHTML = "Problema ao salvar o email, tente novamente mais tarde :(";
+  	});
+});
