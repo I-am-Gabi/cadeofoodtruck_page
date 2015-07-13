@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
 
@@ -143,7 +143,7 @@
                 <div class="col-lg-6 col-lg-offset-3 text-center">
                     <h2 class="section-heading">Encontre seu FoodTruck</h2>
                     <p>Quer ser o primeir@ a saber sobre nosso app assim que for lançado? Cadastre seu email.</p>
-                    <form action="#" method="POST">  
+                    <form action="#cadastro" method="POST">  
                         <hr class="light">
                         <div class="form-group">
                             <input type="email" class="form-control" name="cadastroEmail" placeholder="Email" required>
@@ -172,9 +172,10 @@
                     <h2 class="section-heading">Fale conosco!</h2>
                     <hr class="primary">
                     <p>Quer colocar seu FoodTruck em nosso App? Ou bateu vontade de trocar algumas ideias com nossa equipe? Nos mande uma mensagem.</p>
+                    <p id="msgEmail"></p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" id="formContato">
                         <div class="form-group">
                             <label for="inputNome" class="col-sm-2 control-label">Nome</label>
                             <div class="col-sm-10">
@@ -190,12 +191,12 @@
                         <div class="form-group">
                             <label for="inputMensagem" class="col-sm-2 control-label">Mensagem</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" name="inputMsg" rows="3" required></textarea>
+                                <textarea class="form-control" name="inputMsg" id="inputMsg" rows="3" required></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-12">
-                                <button type="submit" class="btn btn-primary btn-xl" id="enviar">Enviar</button>
+                                <a class="btn btn-primary btn-xl" id="enviar">Enviar</a>
                             </div>
                         </div>
                     </form>
@@ -228,6 +229,9 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+
+    <!-- Nosso JavaScript -->
+    <script src="js/script.js"></script>
 
 </body>
 
